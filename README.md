@@ -1,5 +1,5 @@
-# api-csgo
-API REST desarrollada en Javascript que expone datos y estadísticas del entorno competitivo de CS:GO ✨
+# api-csgo ✨
+API REST desarrollada en Javascript que expone datos y estadísticas del entorno competitivo de CS:GO.
 
 ## Tecnologias implementadas 🧪 
 - <b>Nodejs</b> Entorno de ejecución de la aplicación.
