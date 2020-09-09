@@ -3,13 +3,7 @@ const { HLTV } = require('hltv');
 const router = express.Router();
 
 router.get('/', async function (req, res) {
-    const currentMonth = new Date().getMonth();
-    const remainingMonths = currentMonth === 11 ? 12 : 11;
-    const currentsEvents = await Promise.all(
-        Array.from(Array(remainingMonths - currentMonth), (_, index) => {
-            return HLTV.getEvents({ month: currentMonth + index })
-        })
-    );
+    const currentsEvents = await HLTV.getEvents();
     res.send({ currentsEvents });
 });
 router.get('/:id', async function (req, res) {
