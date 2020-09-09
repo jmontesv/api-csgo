@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 const routes = require('./routes/index');
 const cors = require('cors');
-const { HLTV } = require('hltv');
 
 //Config
 app.set('PORT', process.env.PORT || 3000)
