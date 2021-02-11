@@ -1,11 +1,7 @@
-const express = require('express');
-const { HLTV } = require('hltv');
+const express = require("express");
+const playerController = require("../controllers/player.controller");
 const router = express.Router();
 
-router.get('/:id', async function (req, res) {
-    const { id } = req.params;
-    const playerInfo = await HLTV.getPlayerStats({ id });
-    res.send({ playerInfo });
-});
+router.get("/:id", playerController.getPlayer);
 
 module.exports = router;
