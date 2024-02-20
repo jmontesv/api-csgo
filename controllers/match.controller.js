@@ -18,7 +18,9 @@ matchController.getMatch = async (req, res) => {
     const match = await HLTV.getMatch({ id });
     res.status(200).json(match);
   } catch (err) {
-    res.status(400).json(err);
+    res
+      .status(400)
+      .json({ success: false, code: err.code, message: err.message });
   }
 };
 matchController.getMatchStats = async (req, res) => {
@@ -28,7 +30,7 @@ matchController.getMatchStats = async (req, res) => {
     res.status(200).json(matchStats);
   } catch (err) {
     res.status(400).json(err);
-  }
+   }
 };
 
 module.exports = matchController;
